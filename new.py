@@ -33,6 +33,7 @@ pickup_lines = [
 st.set_page_config(page_title="Valentine's Day Card", page_icon="💖", layout="centered")
 
 # Custom CSS for styling
+
 st.markdown(
     """
     <style>
@@ -60,8 +61,10 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Valentine Message
-st.markdown('<p class="big-text">💖 Be My Valentine 💖</p>', unsafe_allow_html=True)
+st.markdown(
+    '<p style="font-size: 64px; font-family: Brush Script MT, cursive; font-weight: bold; color: #BFE8FF; text-align: center;">💖 Be My Valentine 💖</p>',
+    unsafe_allow_html=True
+)
 
 # Button to display a pickup line
 if st.button("💘 Click to Open 💘"):
