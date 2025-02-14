@@ -48,7 +48,7 @@ st.markdown(
             text-align: center;
         }
         .stButton>button {
-            background: linear-gradient(to right, #FF7F7F, #FFB0E1);
+            background: linear-gradient(to right, #D5C2FF, #FFB0E1);
             color: white;
             border-radius: 50px;
             padding: 20px 40px;
