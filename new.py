@@ -47,7 +47,7 @@ st.markdown(
             color: #BFE8FF;
             text-align: center;
         }
-        .heart-button {
+        .stButton>button {
             background: linear-gradient(to right, #FF7F7F, #FFB0E1);
             color: white;
             border-radius: 50px;
@@ -59,7 +59,7 @@ st.markdown(
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .heart-button:hover {
+        .stButton>button:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
@@ -78,11 +78,9 @@ st.markdown(
 if "button_clicked" not in st.session_state:
     st.session_state.button_clicked = False
 
-# Custom HTML Button (as a replacement for Streamlit button)
-st.markdown(
-    '<button class="heart-button" onclick="window.location.reload()">💘 Click to Open 💘</button>',
-    unsafe_allow_html=True,
-)
+# Create the Streamlit button
+if st.button("💘 Click to Open 💘"):
+    st.session_state.button_clicked = True
 
 # If the button is clicked, display the pickup line
 if st.session_state.button_clicked:
