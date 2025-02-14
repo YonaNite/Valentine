@@ -44,13 +44,13 @@ st.markdown(
             font-size: 48px;
             font-family: 'Brush Script MT', cursive;
             font-weight: bold;
-            color: #D5C2FF;
+            color: #FF82A1;
             text-align: center;
         }
         .pickup-line {
             font-size: 36px !important;
             font-family: 'Brush Script MT', cursive;
-            color: #D5C2FF;  /* Different color for the pickup lines */
+            color: #FF82A1;  /* Different color for the pickup lines */
             font-weight: bold;
             text-align: center;
         }
