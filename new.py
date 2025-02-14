@@ -49,12 +49,19 @@ st.markdown(
             text-align: center;
         }
         .heart-button {
-            background-color: #D5C2FF;
+            background: linear-gradient(to right, #FF7F7F, #FFB0E1); /* Gradient background */
             color: white;
             border-radius: 50px;
-            padding: 15px;
-            font-size: 24px; /* Increased button font size */
+            padding: 20px 40px; /* Larger padding for a bigger button */
+            font-size: 28px; /* Larger font size */
             cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+        }
+        .heart-button:hover {
+            transform: scale(1.1); /* Slightly enlarge the button on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
         }
     </style>
     """,
