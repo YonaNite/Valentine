@@ -48,7 +48,7 @@ st.markdown(
             text-align: center;
         }
         .pickup-line {
-            font-size: 36px;
+            font-size: 48px;
             font-family: 'Brush Script MT', cursive;
             color: #BFE8FF;  /* Different color for the pickup lines */
             font-weight: bold;
