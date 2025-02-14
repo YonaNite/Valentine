@@ -60,6 +60,7 @@ st.markdown(
             border-radius: 50px;
             padding: 20px 40px;
             font-size: 28px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             cursor: pointer;
             border: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
