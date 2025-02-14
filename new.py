@@ -68,14 +68,24 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Button with custom styling
+# Display the "Be My Valentine" text
+st.markdown(
+    '<p style="font-size: 64px; font-family: Brush Script MT, cursive; font-weight: bold; color: #BFE8FF; text-align: center;">💖 Be My Valentine 💖</p>',
+    unsafe_allow_html=True
+)
+
+# Use Streamlit's session state to track button click
+if "button_clicked" not in st.session_state:
+    st.session_state.button_clicked = False
+
+# Custom HTML Button (as a replacement for Streamlit button)
 st.markdown(
     '<button class="heart-button" onclick="window.location.reload()">💘 Click to Open 💘</button>',
     unsafe_allow_html=True,
 )
 
-# Display the random pickup line when button is clicked
-if st.button("💘 Click to Open 💘"):
+# If the button is clicked, display the pickup line
+if st.session_state.button_clicked:
     st.success(random.choice(pickup_lines))
 
 # Cute heart icons for decoration
