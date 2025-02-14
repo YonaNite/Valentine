@@ -37,6 +37,23 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Center the button using HTML and CSS
+st.markdown(
+    """
+    <style>
+        .center-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <div class="center-button">
+        <button class="stButton">💘 Click to Open 💘</button>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 # Button to display a pickup line
 if st.button("💘 Click to Open 💘"):
     st.success(random.choice(pickup_lines))
