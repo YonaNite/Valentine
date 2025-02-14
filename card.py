@@ -37,26 +37,26 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Center the button using HTML and CSS
+# Centering the button using CSS
 st.markdown(
     """
     <style>
         .center-button {
             display: flex;
             justify-content: center;
-            align-items: center;
+            margin-top: 30px;
         }
     </style>
-    <div class="center-button">
-        <button class="stButton">💘 Click to Open 💘</button>
-    </div>
     """,
     unsafe_allow_html=True
 )
 
-# Button to display a pickup line
-if st.button("💘 Click to Open 💘"):
-    st.success(random.choice(pickup_lines))
+# Create a centered container for the button
+with st.container():
+    st.markdown('<div class="center-button">', unsafe_allow_html=True)
+    if st.button("💘 Click to Open 💘"):
+        st.success(random.choice(pickup_lines))
+    st.markdown('</div>', unsafe_allow_html=True)
 
 # Cute heart icons for decoration with larger size
 st.markdown(
