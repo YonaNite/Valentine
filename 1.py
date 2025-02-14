@@ -14,6 +14,7 @@ pickup_lines = [
     "Are you a Wi-Fi signal? Cuz I'm feeling a connection!",
     "Are you a loan? Cuz you've got my interest",
     "Are you a camera? Cuz all I can do is smile when I see you",
+    "Are you a parking ticket? Cuz you've got 'FINE' written all over you!",
     "Are you a time traveler? Cuz I can see you in my future!",
     "Is your name Google? Cuz you have everything I've been searching for! ",
     "Are you made of copper and tellurium? Because you're Cu-Te!",
@@ -31,40 +32,36 @@ pickup_lines = [
 # Set the page title and background color
 st.set_page_config(page_title="Valentine's Day Card", page_icon="💖", layout="centered")
 
-# Custom CSS for styling and mobile-friendly layout fixes
+# Custom CSS + JavaScript for button font fix
 st.markdown(
     """
     <style>
         .stApp {
-            background-color: #FFB0E1;
+            background-color: #E8D1F3;  /* Light purple background */
             text-align: center;
         }
-        .header-text {
-            font-size: 48px !important;
+        .big-text {
+            font-size: 48px;
             font-family: 'Brush Script MT', cursive;
             font-weight: bold;
-            color: #FF82A1;
+            color: #FF82A1; /* Soft pink color for hearts text */
             text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
         }
         .pickup-line {
-            font-size: 36px !important;
-            font-family: 'Brush Script MT', cursive;
-            color: #FF82A1;
+            font-size: 36px !important; /* Ensures font-size is applied */
+            font-family: 'Arial', sans-serif;
+            color: #BFE8FF;  /* Different color for the pickup lines */
             font-weight: bold;
             text-align: center;
-            line-height: 1.5;
+            line-height: 1.5;  /* Add some space between lines */
         }
         .stButton>button {
-            background: linear-gradient(to right, #D5C2FF, #FFB0E1);
+            background: linear-gradient(to right, #FF7F7F, #FFB0E1);
             color: white;
             border-radius: 50px;
             padding: 20px 40px;
             font-size: 28px;
-            font-family: 'Comic Sans MS', cursive, sans-serif !important;
+            font-family: 'Comic Sans MS', cursive, sans-serif;  /* This may not apply */
             cursor: pointer;
             border: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -73,44 +70,25 @@ st.markdown(
         .stButton>button:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            background-color: #FF4C8B;
-        }
-        
-        /* Responsive Design for Mobile */
-        @media (max-width: 768px) {
-            .header-text {
-                font-size: 48px;
-                padding: 10px;
-            }
-            .pickup-line {
-                font-size: 28px !important;
-            }
-            .stButton>button {
-                font-size: 24px;
-                padding: 15px 30px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header-text {
-                font-size: 36px;
-            }
-            .pickup-line {
-                font-size: 24px !important;
-            }
-            .stButton>button {
-                font-size: 20px;
-                padding: 12px 25px;
-            }
+            background-color: #FF4C8B;  /* Changed hover color */
         }
     </style>
+
+    <script>
+        setTimeout(function() {
+            var buttons = document.querySelectorAll('.stButton button');
+            buttons.forEach(button => {
+                button.style.fontFamily = "'Comic Sans MS', cursive, sans-serif";  // Force font change
+            });
+        }, 500); // Wait for Streamlit to render the button
+    </script>
     """,
     unsafe_allow_html=True,
 )
 
 # Display the "Be My Valentine" text
 st.markdown(
-    '<p class="header-text">💖 Be My Valentine 💖</p>',
+    '<p style="font-size: 64px; font-family: Brush Script MT, cursive; font-weight: bold; color: #FF82A1; text-align: center;">💖 Be My Valentine 💖</p>',
     unsafe_allow_html=True
 )
 
