@@ -47,8 +47,15 @@ st.markdown(
             color: #BFE8FF;
             text-align: center;
         }
+        .pickup-line {
+            font-size: 24px;
+            font-family: 'Arial', sans-serif;
+            color: #4B0082;  /* Indigo color for the pickup lines */
+            font-weight: bold;
+            text-align: center;
+        }
         .stButton>button {
-            background: linear-gradient(to right, #D5C2FF, #FFB0E1);
+            background: linear-gradient(to right, #FF7F7F, #FFB0E1);
             color: white;
             border-radius: 50px;
             padding: 20px 40px;
@@ -70,7 +77,7 @@ st.markdown(
 
 # Display the "Be My Valentine" text
 st.markdown(
-    '<p style="font-size: 64px; font-family: Brush Script MT, cursive; font-weight: bold; color: #BFE8FF; text-align: center;">💖 Be My Valentine 💖</p>',
+    '<p style="font-size: 64px; font-family: Brush Script MT, cursive; font-weight: bold; color: #FF82A1; text-align: center;">💖 Be My Valentine 💖</p>',
     unsafe_allow_html=True
 )
 
@@ -84,7 +91,7 @@ if st.button("💘 Click to Open 💘"):
 
 # If the button is clicked, display the pickup line
 if st.session_state.button_clicked:
-    st.success(random.choice(pickup_lines))
+    st.markdown(f'<p class="pickup-line">{random.choice(pickup_lines)}</p>', unsafe_allow_html=True)
 
 # Cute heart icons for decoration
 st.markdown('<p class="big-text">💖💖💖</p>', unsafe_allow_html=True)
