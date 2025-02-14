@@ -33,7 +33,6 @@ pickup_lines = [
 st.set_page_config(page_title="Valentine's Day Card", page_icon="💖", layout="centered")
 
 # Custom CSS for styling
-
 st.markdown(
     """
     <style>
@@ -42,38 +41,40 @@ st.markdown(
             text-align: center;
         }
         .big-text {
-            font-size: 48px; /* Increased font size */
+            font-size: 48px;
             font-family: 'Brush Script MT', cursive;
             font-weight: bold;
             color: #BFE8FF;
             text-align: center;
         }
         .heart-button {
-            background: linear-gradient(to right, #FF7F7F, #FFB0E1); /* Gradient background */
+            background: linear-gradient(to right, #FF7F7F, #FFB0E1);
             color: white;
             border-radius: 50px;
-            padding: 20px 40px; /* Larger padding for a bigger button */
-            font-size: 28px; /* Larger font size */
+            padding: 20px 40px;
+            font-size: 28px;
             cursor: pointer;
             border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .heart-button:hover {
-            transform: scale(1.1); /* Slightly enlarge the button on hover */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
     </style>
     """,
     unsafe_allow_html=True,
 )
 
+# Button with custom styling
 st.markdown(
-    '<p style="font-size: 64px; font-family: Brush Script MT, cursive; font-weight: bold; color: #BFE8FF; text-align: center;">💖 Be My Valentine 💖</p>',
-    unsafe_allow_html=True
+    '<button class="heart-button" onclick="window.location.reload()">💘 Click to Open 💘</button>',
+    unsafe_allow_html=True,
 )
 
-# Button to display a pickup line
+# Display the random pickup line when button is clicked
 if st.button("💘 Click to Open 💘"):
     st.success(random.choice(pickup_lines))
 
