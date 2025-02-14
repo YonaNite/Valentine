@@ -41,18 +41,18 @@ st.markdown(
             text-align: center;
         }
         .big-text {
-            font-size: 36px;
+            font-size: 48px; /* Increased font size */
             font-family: 'Brush Script MT', cursive;
             font-weight: bold;
             color: #BFE8FF;
             text-align: center;
         }
         .heart-button {
-            background-color: #FF69B4;
+            background-color: #D5C2FF;
             color: white;
             border-radius: 50px;
             padding: 15px;
-            font-size: 20px;
+            font-size: 24px; /* Increased button font size */
             cursor: pointer;
         }
     </style>
