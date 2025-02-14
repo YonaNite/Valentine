@@ -36,11 +36,11 @@ st.markdown(
     """
     <style>
         .stApp {
-            background-color: #E8D1F3;  /* Light purple background */
+            background-color: #FFB0E1;
             text-align: center;
         }
         .header-text {
-            font-size: 64px;
+            font-size: 48px !important;
             font-family: 'Brush Script MT', cursive;
             font-weight: bold;
             color: #FF82A1;
@@ -52,19 +52,19 @@ st.markdown(
         }
         .pickup-line {
             font-size: 36px !important;
-            font-family: 'Arial', sans-serif;
-            color: #BFE8FF;
+            font-family: 'Brush Script MT', cursive;
+            color: #FF82A1;
             font-weight: bold;
             text-align: center;
             line-height: 1.5;
         }
         .stButton>button {
-            background: linear-gradient(to right, #FF7F7F, #FFB0E1);
+            background: linear-gradient(to right, #D5C2FF, #FFB0E1);
             color: white;
             border-radius: 50px;
             padding: 20px 40px;
             font-size: 28px;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-family: 'Comic Sans MS', cursive, sans-serif !important;
             cursor: pointer;
             border: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
