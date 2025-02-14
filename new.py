@@ -13,6 +13,20 @@ pickup_lines = [
     "If beauty were a crime, you'd be serving a life sentence!",
     "Are you a Wi-Fi signal? Cuz I'm feeling a connection!",
     "Are you a loan? Cuz you've got my interest",
+    "Are you a camera? Cuz all I can do is smile when I see you",
+    "Are you a parking ticket? Cuz you've got 'FINE' written all over you!",
+    "Are you a time traveler? Cuz I can see you in my future!",
+    "Is your name Google? Cuz you have everything I've been searching for! ",
+    "Are you made of copper and tellurium? Because you're Cu-Te!",
+    "Did the sun come out, or did you just smile at me?",
+    "I'd give up my morning cereal to spoon you instead.",
+    "I love my bed, but I'd rather be in yours.",
+    "It's a good thing I have my library card, because I am totally checking you out.",
+    "If I could rearrange the alphabet, I'd put U and I together.",
+    "Anyone who says Disneyland is the happiest place on earth has clearly never stood next to you.",
+    "If you were words on a page you'd be the fine print.",
+    "You know those gaps between your fingers? I think they were made for mine.",
+    "Want to grab coffee? I like you a latte."
 ]
 
 # Set the page title and background color
@@ -34,7 +48,7 @@ st.markdown(
             text-align: center;
         }
         .heart-button {
-            background-color: #D5C2FF;
+            background-color: #FF69B4;
             color: white;
             border-radius: 50px;
             padding: 15px;
@@ -50,7 +64,7 @@ st.markdown(
 st.markdown('<p class="big-text">💖 Be My Valentine 💖</p>', unsafe_allow_html=True)
 
 # Button to display a pickup line
-if st.button("💘 Click for a Cute Message 💘"):
+if st.button("💘 Click to Open 💘"):
     st.success(random.choice(pickup_lines))
 
 # Cute heart icons for decoration
