@@ -49,8 +49,8 @@ st.markdown(
         }
         .pickup-line {
             font-size: 24px;
-            font-family: 'Arial', sans-serif;
-            color: #4B0082;  /* Indigo color for the pickup lines */
+            font-family: 'Brush Script MT', cursive;
+            color: #9ECF99;  /* Different color for the pickup lines */
             font-weight: bold;
             text-align: center;
         }
